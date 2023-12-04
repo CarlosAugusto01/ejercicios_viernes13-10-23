@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Array</h1>
+    <script>
+        var clasificaciones = ["Ana","Oswaldo","Raúl","Celia","María","Antonio"];
+        //clasificacion actual
+        console.log(clasificaciones);
+
+        //celia adelanta Raúl
+        var posicionOrigen = 3;
+        var posicionDestino = 2;
+        var nombreMover = clasificaciones[posicionOrigen];
+        clasificaciones[posicionOrigen] = clasificaciones[posicionDestino];
+        clasificaciones[posicionDestino] = nombreMover;
+        console.log(clasificaciones);
+
+        //Antonio es descalificado y se elimina del concurso
+        var descalificado = clasificaciones.pop("Antonio");
+        console.log(clasificaciones);
+
+        //Detrás de Ana y antes de oswaldo se clasifican dos nuevos concursantes
+        // roberto y Amaya, en ese orden
+        var nuevoConcursante1 = "Roberto"; 
+        var nuevoConcursante2 = "Amaya";   
+        var posicionAna = clasificaciones.indexOf("Ana");
+        var posicionOswaldo = clasificaciones.indexOf("Oswaldo");
+        // Inserta los nuevos concursantes en las posiciones adecuadas
+        clasificaciones.splice(posicionAna + 1, 0, nuevoConcursante1, nuevoConcursante2);
+        console.log(clasificaciones);
+
+        //Hay una nueva participante que pasa a encabezar la clasificación:
+        // Marta
+        var encabezar = clasificaciones.unshift("Marta");
+        console.log(clasificaciones);
+
+        //Imprime la clasificacion actualizada y comprueba que se ha hecho correctamente
+        console.log(clasificaciones);
+    </script>
+</body>
+</html>

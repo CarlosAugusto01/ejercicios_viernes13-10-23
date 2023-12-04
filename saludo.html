@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>saludo</title>
+</head>
+<body>
+    <div id="saludos"></div>
+
+    <script>
+        var estudiantes = ["Liseth", "Alex", "Rudy", "Yoselin", "Cristian"];
+
+        function saludarCompañeros() {
+            var saludos = "";
+            for (var i = 0; i < estudiantes.length; i++) {
+                saludos += "Buenos días, " + estudiantes[i] + "!<br>";
+            }
+            document.getElementById("saludos").innerHTML = saludos;
+        }
+        saludarCompañeros();
+    </script>
+</body>
+</html>

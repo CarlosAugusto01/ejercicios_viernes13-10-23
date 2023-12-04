@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function ingresarCarro() {
+        var marca = prompt("Ingresa la marca del carro:");
+        var modelo = prompt("Ingresa el modelo del carro:");
+        var año = prompt("Ingresa el año del carro:");
+
+        return { marca, modelo, año };
+        }
+
+        var carros = [];
+
+        for (var i = 0; i < 5; i++) {
+        var carro = ingresarCarro();
+        carros.push(carro);
+        }
+
+        console.log(carros);
+    </script>
+</body>
+</html>
